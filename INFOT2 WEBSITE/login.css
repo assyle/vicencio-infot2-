@@ -1,0 +1,110 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Trebuchet MS, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url(bg.jpg);
+  background-repeat: no repeat;
+}
+/* Keyframes for the gradient animation */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Form Container Styling */
+.form-container {
+  width: 100%;
+  max-width: 350px;
+  padding: 25px;
+  
+  form-container-position:center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #282c34;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.2);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #000000;
+  font-size: 50px;
+}
+  /* Label Styling */
+label {
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+  color: black;
+  font-size: 15px;
+}
+
+/* Input Field Styling */
+input[type="text"], 
+input[type="password"] 
+
+{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+/* Button Styling */
+button {
+  
+  width: 100%;
+  padding: 12px;
+  background-color: lightblue;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+}
+
+button:hover {
+  background-color:lightblue;
+}
+/* Error Message Styling */
+#errorMessage {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+/* Show Password Container */
+.show-password {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.show-password input[type="checkbox"] {
+  margin-right: 5px;
+ 
+}

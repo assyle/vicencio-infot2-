@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial- scale=1.0">
+<title>My Goals as a Student</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+<h1>Welcome to My Personal Website</h1>
+</header>
+  <nav>
+<ul>
+<li><a href="home.html">HOME</a></li>
+<li class="dropdown">
+<a href="#" class="dropbtn">ABOUT</a> <div class="dropdown-content">
+<a href="skills.html">Skills I'm Developing</a> <a href="goals.html">My Goals as a Student</a> <a href="funfacts.html">Fun Facts About Me</a> </div>
+</li>
+<li><a href="gallery.html">GALLERY</a></li> <li><a href="Contact.html">CONTACT</a></li> <a href="javascript:void(0);" class="logout-button" onclick="confirmLogout()">LOG OUT</a>
+</ul>
+</nav>
+<section id="section2"></section> <section id="drop">
+<h2>My Goals as a Student</h2>
+<p style="text-align: center;">Here are the aspirations I'm passionately pursuing!</p>
+<div class="goal-grid">
+<div class="goal-card" onclick="toggleGoalDetails(1)"> <div class="goal-header" style="background-color: #08073e;"><strong>Short-Term Goals</strong></div> <p><strong>Enhance my web development skills. </strong></p>
+<div class="goal-details" id="goal1-details"> <p>By focusing on these short-term goals,
+I am confident that I will do my best to enhance my web development skills
+and set a solid foundation for my future endeavors in the tech industry.</p>
+</div>
+</div>
+  <div class="goal-card" onclick="toggleGoalDetails(2)"> <div class="goal-header" style="background-color: #252535;"><strong>Long-Term Goals</strong></div> <p>Become a proficient front-end developer.</p> <div class="goal-details" id="goal2-details">
+<p>By setting these long-term goals, I am dedicated to fulfilling my dreams and aspirations in the future.</p>
+</div>
+</div>
+<div class="goal-card" onclick="toggleGoalDetails(3)"> <div class="goal-header" style="background-color: #2a0441;"><strong>Career Goals</strong></div>
+<p>As I navigate my professional journey, I am committed to setting and achieving clear career goals that reflect my passions and aspirations. </p>
+<div class="goal-details" id="goal3-details">
+<p>My goal is to grow into a leadership position where I can guide teams, drive projects to success, and contribute to strategic decision-making.
+I aim to develop my leadership skills through experience and by seeking out opportunities to lead initiatives within my current role.</p>
+</div>
+</div>
+<div class="goal-card" onclick="toggleGoalDetails(4)"> <div class="goal-header" style="background-color: #2a0441;"><strong>Personal Development</strong></div>
+<p>Personal growth happens when you learn from your mistakes. </p>
+<div class="goal-details" id="goal3-details">
+<p> We all learn from our previous mistakes. It is what makes us the better verson of ourselves.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<footer>
+  <p>&copy;2024 ELYSSA JEAN VICENCIO. All rights reserved.</p> </footer>
+<div class="footer-divider"></div> <!-- lightblue-->
+<script>
+<!-- Embedded JavaScript -->
+// Function to toggle details for a single card
+function toggleGoalDetails(group) {
+    const details = document.getElementById('goal' + group + '-details');
+    if (details) {
+        details.classList.toggle('active');
+    }
+}
+</script>
+<script>
+// Logout function with confirmation
+function confirmLogout() {
+    // Show a confirmation message to the user
+    const confirmLogout = confirm("Are you sure you want to log out?");
+    // If the user confirms, proceed with logging out
+    if (confirmLogout) {
+        // Mark the user as logged out in localStorage (if used)
+        localStorage.removeItem("isLoggedIn");
+        // Redirect to the login page
+        window.location.href = "login.html";
+    } else {
+        // If the user cancels, do nothing
+        return;
+    }
+}
+</script>
+</body>
+</html>
+  
